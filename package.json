@@ -1,0 +1,9 @@
+{
+  "name": "final-activity",
+  "version": "1.0.0",
+  "main": "index.js",
+  "type": "module",
+  "repository": "git@github.com:SuellendaVinci/inheritance-and-polymorphism.git",
+  "author": "Suellen Priscilla de Camargo <suellen.priscilla.camargo@gmail.com>",
+  "license": "MIT"
+}

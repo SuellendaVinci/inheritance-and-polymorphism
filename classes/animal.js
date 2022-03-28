@@ -35,14 +35,26 @@ class Animal {
       return this.#sono;
     }
 
+    set fome(valor) {
+      this.#fome = valor;
+    }
+
+    set sono(valor) {
+      this.#sono = valor;
+    }
+
+    set saude(valor) {
+      this.#saude = valor;
+    }
+
     seMovimentar() {
       if(this.#fome === 10) {
         this.#fome = 10;
-        return FOME_MAX;
+        return Animal.FOME_MAX_MSG;
       } 
       if(this.#sono === 10) {
         this.#sono = 10;
-        return SONO_MAX;
+        return Animal.SONO_MAX_MSG;
       } 
       else {
         this.#fome += 1;

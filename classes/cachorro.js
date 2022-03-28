@@ -3,8 +3,6 @@ import { Animal } from "./animal.js";
 // Herança
 class Cachorro extends Animal {
 
-  
-
   // props estáticas
   static MSG = {
     "SOM": "au au"
@@ -14,11 +12,11 @@ class Cachorro extends Animal {
   seMovimentar() {
     if(this.fome === 10) {
       this.fome = 10;
-      return FOME_MAX;
+      return Animal.FOME_MAX_MSG;
     } 
     if(this.sono === 10) {
       this.sono = 10;
-      return SONO_MAX;
+      return Animal.SONO_MAX_MSG;
     } 
     else {
       this.fome += 4;
@@ -29,7 +27,7 @@ class Cachorro extends Animal {
 
   // polimorfismo - reescrita do método
   info() {
-    return `O seu cachorro se chama ${this.nome}, ele faz ${this.Cachorro.MSG.SOM}, tem ${this.idade} anos e encontra-se ${(this.saúde)? "saudável" : "doente"}`
+    return `O seu cachorro se chama ${this.nome}, ele emite ${Cachorro.MSG.SOM}, tem ${this.idade} anos e encontra-se ${(this.saude)? "saudável" : "doente"}`
   };
   
 }

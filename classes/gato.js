@@ -13,11 +13,11 @@ class Gato extends Animal {
   seMovimentar() {
     if(this.fome === 10) {
       this.fome = 10;
-      return FOME_MAX;
+      return Animal.FOME_MAX_MSG;
     } 
     if(this.sono === 10) {
       this.sono = 10;
-      return SONO_MAX;
+      return Animal.SONO_MAX_MSG;
     } 
     else {
       this.fome += 3;
@@ -28,7 +28,7 @@ class Gato extends Animal {
 
   // polimorfismo - reescrita do método
   info() {
-    return `O seu gato se chama ${this.nome}, ele faz ${this.Gato.MSG.SOM}, tem ${this.idade} anos e encontra-se ${(this.saúde)? "saudável" : "doente"}`
+    return `O seu gato se chama ${this.nome}, ele emite ${Gato.MSG.SOM}, tem ${this.idade} anos e encontra-se ${(this.saude)? "saudável" : "doente"}`
   };
 
 }
