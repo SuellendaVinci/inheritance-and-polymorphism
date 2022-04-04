@@ -3,11 +3,29 @@ import { Animal } from "./animal.js";
 // Herança
 class Papagaio extends Animal {
 
+  constructor(especie= "", nome="", idade=0, fome=0, sono=0, saude=true, cor="") {
+    super(especie, nome, idade, fome, sono, saude);
+    this.#cor = cor;
+  }
+
+  #cor
+
+  get cor() {
+    return this.#cor;
+  }
+
   // props estáticas
   static MSG = {
-    "SOM": "FORA BOLSONARO!"
+    "SOM": "FORA BOLSONARO!",
+    "MUSICA": "lá dó ré mi fá# mi ré si sol ĺá si dó lá lá sol# lá si sol# mi"
     //o papagaio fala o que a mãe ensina, meu papagaio tem consciência de classe.
   }
+  
+
+  assobiar() {
+    return Papagaio.MSG.MUSICA;
+  }
+
 
   //polimorfismo 
 
@@ -38,7 +56,7 @@ class Papagaio extends Animal {
 
   // polimorfismo - reescrita do método
   info() {
-    return `O seu papagaio se chama ${this.nome}, ele emite ${Papagaio.MSG.SOM}, tem ${this.idade} anos e encontra-se ${(this.saude)? "saudável" : "doente"}`
+    return `O seu papagaio se chama ${this.nome}, tem a cor ${this.#cor}, ele emite ${Papagaio.MSG.SOM}, tem ${this.idade} anos e encontra-se ${(this.saude)? "saudável" : "doente"}`
   };
 
 }

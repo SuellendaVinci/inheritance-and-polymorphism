@@ -73,7 +73,7 @@ class Animal {
       return Animal.MSG.DORMIR_MSG;
     }
 
-    não_cuidar() {
+    nao_cuidar() {
       this.#saude = false;
       return Animal.MSG.NÃO_CUIDAR_MSG;
     }

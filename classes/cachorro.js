@@ -3,9 +3,25 @@ import { Animal } from "./animal.js";
 // Herança
 class Cachorro extends Animal {
 
+  constructor(especie= "", nome="", idade=0, fome=0, sono=0, saude=true, cor="") {
+    super(especie, nome, idade, fome, sono, saude);
+    this.#cor = cor;
+  }
+
+  #cor
+
+  get cor() {
+    return this.#cor;
+  }
+
   // props estáticas
   static MSG = {
-    "SOM": "au au"
+    "SOM": "au au",
+    "ELOGIO": "Bom garoto"
+  }
+
+  darAPatinha() {
+    return Cachorro.MSG.ELOGIO;
   }
 
   //polimorfismo - o cachorro gasta mais energia ao se movimentar, por isso sente mais fome e sono
@@ -27,7 +43,7 @@ class Cachorro extends Animal {
 
   // polimorfismo - reescrita do método
   info() {
-    return `O seu cachorro se chama ${this.nome}, ele emite ${Cachorro.MSG.SOM}, tem ${this.idade} anos e encontra-se ${(this.saude)? "saudável" : "doente"}`
+    return `O seu cachorro se chama ${this.nome}, tem a cor ${this.#cor}, ele emite ${Cachorro.MSG.SOM}, tem ${this.idade} anos e encontra-se ${(this.saude)? "saudável" : "doente"}`
   };
   
 }

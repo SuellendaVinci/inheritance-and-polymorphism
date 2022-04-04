@@ -13,9 +13,10 @@ const cachorro = new Cachorro("cachorro","Ted", 2, 2, 1, true);
   cachorro.seMovimentar();
   console.log(cachorro.comer());
   console.log(cachorro.dormir());
-  console.log(cachorro.não_cuidar());
+  console.log(cachorro.nao_cuidar());
   console.log(cachorro.info());
   console.log(cachorro.cuidar());
+  console.log(cachorro.darAPatinha());
   console.log("--------------------------");
 
   const gato = new Gato("gato","Mingau", 3, 1, 0, true);
@@ -26,9 +27,10 @@ const cachorro = new Cachorro("cachorro","Ted", 2, 2, 1, true);
   gato.seMovimentar();
   console.log(gato.comer());
   console.log(gato.dormir());
-  console.log(gato.não_cuidar());
+  console.log(gato.nao_cuidar());
   console.log(gato.info());
   console.log(gato.cuidar());
+  console.log(gato.fazerCarinhoNaBarriguinha());
   console.log("--------------------------");
 
   const papagaio = new Papagaio("papagaio","Louro José", 10, 8, 2, true);
@@ -39,9 +41,10 @@ const cachorro = new Cachorro("cachorro","Ted", 2, 2, 1, true);
   papagaio.seMovimentar();
   console.log(papagaio.comer());
   console.log(papagaio.dormir());
-  console.log(papagaio.não_cuidar());
+  console.log(papagaio.nao_cuidar());
   console.log(papagaio.info());
   console.log(papagaio.cuidar());
+  console.log(papagaio.assobiar());
   console.log("--------------------------");
 
 

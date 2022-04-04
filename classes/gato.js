@@ -3,9 +3,26 @@ import { Animal } from "./animal.js";
 // Herança
 class Gato extends Animal {
 
+  constructor(especie= "", nome="", idade=0, fome=0, sono=0, saude=true, cor="") {
+    super(especie, nome, idade, fome, sono, saude);
+    this.#cor = cor;
+  }
+
+  #cor
+
+  get cor() {
+    return this.#cor;
+  }
+
+
   // props estáticas
   static MSG = {
-    "SOM": "miau miau"
+    "SOM": "miau miau",
+    "RONRONAR": "rrrrrr!rom-rom"
+  }
+
+  fazerCarinhoNaBarriguinha() {
+    return Gato.MSG.RONRONAR;
   }
 
   //polimorfismo - o gato é um animal pequeno logo sente menos fome e por ser um felino tem
@@ -28,7 +45,7 @@ class Gato extends Animal {
 
   // polimorfismo - reescrita do método
   info() {
-    return `O seu gato se chama ${this.nome}, ele emite ${Gato.MSG.SOM}, tem ${this.idade} anos e encontra-se ${(this.saude)? "saudável" : "doente"}`
+    return `O seu gato se chama ${this.nome}, tem a cor ${this.#cor}, ele emite ${Gato.MSG.SOM}, tem ${this.idade} anos e encontra-se ${(this.saude)? "saudável" : "doente"}`
   };
 
 }
